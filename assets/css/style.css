@@ -1,0 +1,302 @@
+
+body {
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template: 
+    'header header' 56px
+    'sidebar content' 1fr / 218px 1fr;
+}
+
+/* Header*/
+.header {
+ grid-area: header; 
+ height: 56px;
+ padding: 0 24px;
+ background-color: var(--bgcolor-white);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+
+/* Menu Icons */
+.header .menu {
+  height: 24px;
+  width: 146px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .menu .menu__ico {
+  width: 24px;
+  cursor: pointer;
+}
+.header .menu .menu__youtubelogo {
+  width: 90px;
+  height: 20px;
+  cursor: pointer;
+
+}
+
+/* Search bar */
+.search {
+  display: flex;
+  align-items: center;
+  width: 404px;
+  height: 40px;
+  border: 1px solid var(--bordercolor-grey);
+}
+.search .search__input {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  width: 348px;
+  border: 1px solid var(--bordercolor-grey);
+  cursor: pointer;
+}
+.search .search__button {
+  margin: 0;
+  padding: 0;
+  width: 57px;
+  height: 40px;
+  background-color: var(--bgcolor-button);
+  border: 0 1px solid var(--bordercolor-grey);
+  cursor: pointer;
+}
+
+/* Menu User Icons */
+.menu-user {
+  width: 130px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-user .menu-user__camera {
+  width: 24px;
+  cursor: pointer;
+}
+.menu-user .menu-user__bell {
+  width: 24px;
+  cursor: pointer;
+}
+.menu-user .menu-user__perfil {
+  width: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+/* Content */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--bgcolor-button);
+  grid-area: content;
+  display: grid;
+  grid-template: 
+        'um doi tre qua' 262px
+        'cin sei set oit' 262px
+        'nov dez onz doz' 262px / 282px 282px 282px 282px;
+  gap: 16px;
+  padding: 16px 28px;
+  align-items: center;
+  justify-content: space-;
+}
+
+/* Organização estilo de item content__geral */
+.content .content__geral {
+  display: grid;
+  grid-template: 'thumb' 140.29px 'info' 74px / 250px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.content .thumb {
+  grid-area: thumb;
+  width: 250px;
+  cursor: pointer;
+}
+.content .info {
+  display: grid;
+  grid-template: 'ico info' 74px / 52px 198px 
+}
+.content .ico__channel {
+  grid-area: ico;
+  align-items: start;
+  cursor: pointer;
+  width: 42px;
+}
+.content .infos-video {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content .infos-video h1 {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+.content .infos-video .flex-info p {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--color-grey);
+  cursor: pointer;
+}
+
+/* Posicionamento dos cards */
+/*1*/
+.content .c1 {
+  grid-area: um;
+}
+/*2*/
+.content .c2 {
+  grid-area: doi;
+}
+/*3*/
+.content .c3 {
+  grid-area: tre;
+}
+/*4*/
+.content .c4 {
+  grid-area: qua;
+}
+/*5*/
+.content .c5 {
+  grid-area: cin;
+}
+/*6*/
+.content .c6 {
+  grid-area: sei;
+}
+/*7*/
+.content .c7 {
+  grid-area: set;
+}
+/*8*/
+.content .c8 {
+  grid-area: oit;
+}
+/*9*/
+.content .c9 {
+  grid-area: nov;
+}
+/*10*/
+.content .c10 {
+  grid-area: dez;
+}
+/*11*/
+.content .c11 {
+  grid-area: onz;
+}
+/*12*/
+.content .c12 {
+  grid-area: doz;
+}
+
+
+/* Sidebar - todos os estilos e configurações de posicionamento da barra lateral*/
+.sidebar {
+  grid-area: sidebar;
+  width: 218px;
+  height: 968px;
+  padding: 24px;
+}
+.sidebar ul {
+  display: grid;
+  grid-template: 
+  'link1' auto
+  'link2' auto
+  'link3' auto
+  'link4' auto
+  'link5' auto
+  'link6' auto
+  'link7' auto
+  'link8' auto
+  'link9' auto
+  'link10' auto / 75px;
+  gap: 16px;
+}
+
+/* Geral Links - todas os links da barra lateral estão estilisados abaixo*/
+.sidebar .lk, .lk2 {
+  height: 24px;
+  display: grid;
+  grid-template: 'ico text' auto / auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.sidebar .lk .sidebar__ico {
+  grid-area: ico;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+}
+.sidebar .lk .sidebar__text {
+  grid-area: text;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.sidebar .lk2 .sidebar__text {
+  width: 160px;
+  grid-area: text;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+/* Posicionamento do links do menu lateral */
+/* Link1 */
+.sidebar .sidebar-links1 {
+  grid-area: link1;
+}
+/* Link2 */
+.sidebar .sidebar-links2 {
+  grid-area: link2;
+}
+/* Link2 */
+.sidebar .sidebar-links3 {
+  grid-area: link3;
+}
+/* Link4 */
+.sidebar .sidebar-links4 {
+  grid-area: link4;
+}
+/* Link5 */
+.sidebar .sidebar-links5 {
+  grid-area: link5;
+}
+/* Link6 */
+.sidebar .sidebar-links6 {
+  grid-area: link6;
+}
+/* Link7 */
+.sidebar .sidebar-links7 {
+  grid-area: link7;
+}
+/* Link8 */
+.sidebar .sidebar-links8 {
+  grid-area: link8;
+}
+/* Link9 */
+.sidebar .sidebar-links9 {
+  grid-area: link9;
+}
+/* Link10 */
+.sidebar .sidebar-links10 {
+  grid-area: link10;
+}
